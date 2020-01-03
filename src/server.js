@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
   app.get('/posts/id', function (req, res) {
     res.send('Hello Home - > Posts [id] ');
   });
-mongoose.connect('mongodb+srv://user:gEoAYgDvnI4mS23r@spcluster-1skkx.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect(''+ process.env.REACT_APP_MONGODB,
 {useNewUrlParser: true,useUnifiedTopology: true}, () => console.log('connect to db'));
 app.listen(8089, function () {
   console.log('Example app listening on port 8089!');
